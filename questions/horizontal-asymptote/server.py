@@ -1,4 +1,5 @@
 import random
+import sympy
 
 def generate(data):
 
@@ -8,17 +9,16 @@ def generate(data):
     b = random.randrange(2,5)
     c = random.randrange(1,6)
     d = random.randrange(1,6)
-    p = random.randrange(1,12)
-
-    #since degree for both is fixed at 2,
-    horizontalAsymptote = p/(a*b)
-
+    e = random.randrange(1,6)
+    f = random.randrange(1,6)
+    g = random.randrange(1,6)
     
-    data["params"]["a"] = a
-    data["params"]["b"] = b
-    data["params"]["c"] = c
-    data["params"]["d"] = d
-    data["params"]["p"] = p
+    #since degree for both is fixed at 2,
+    horizontalAsymptote = a/(e*g)
+
+    x = sympy.symbols("x")
+
+    data["params"]["rationalPolynomial"] = sympy.latex((a * x**2 + b * x + c)/(d - e * x)(f - g * x))   
     data["correct_answers"]["ans"] = horizontalAsymptote
 
 
