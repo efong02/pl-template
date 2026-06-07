@@ -15,6 +15,7 @@ def generate(data):
     
     #since degree for both is fixed at 2, only the leading coefficients matter for horizontal asymptote
     horizontalAsymptote = a/(e*g*h)
+    
     x = sympy.symbols("x")
 
     data["params"]["rationalPolynomial"] = sympy.latex((a * x**2 + b * x + c)/((d - e * x)*(f - h * g * x)))   
