@@ -18,7 +18,7 @@ def generate(data):
 
     x = sympy.symbols("x")
 
-    data["params"]["rationalPolynomial"] = sympy.latex((a * x**2 + b * x + c)/(d - e * x)(f - h * g * x))   
+    data["params"]["rationalPolynomial"] = sympy.latex((a * x**2 + b * x + c)/(d - e * x)*(f - h * g * x))   
     data["correct_answers"]["ans"] = horizontalAsymptote
 
 
