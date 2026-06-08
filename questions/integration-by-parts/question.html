@@ -1,6 +1,14 @@
 <pl-question-panel>
     <p>
-        Compute the following integral using integration by parts: $$\int {{params.integrand}}dx$$
+        Integration by parts is an integration technique that can help us integrate when the integrand is a product of two functions and can't be integrated by simpler methods, like $u$-substitution. The formula for integration by parts is written below:
+        $$\int u dv = uv - \int v du$$
+    </p>
+    <p>
+        We choose part of the integrand to be $u$ and the rest to be $dv$. If we choose well, the integral becomes solvable. But be careful! For some choices of $u$ and $dv$, integration by parts can make things worse!
+    </p>
+    <p>
+        Consider the following integral: $$\int {{params.integrand}}dx$$ 
+        Integrate using integration by parts. Remember, you can always check your work by taking the derivative of your result. You should end up with the original integrand!
     </p>
 </pl-question-panel>
 

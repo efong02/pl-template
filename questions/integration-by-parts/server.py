@@ -3,15 +3,14 @@ import sympy
 
 def generate(data):
     a = random.randrange(2,5)
+
+    #select a transcendental function.
     flavor = random.randrange(1,5)
     x = sympy.symbols('x')
-
-    #TODO: add cases where (x-a) for some small a.
 
     #exponential
     if flavor == 1: 
         integrand = x*sympy.exp(a*x)
-        #TODO: add a correct u,dv for each case.
     #logarithmic
     if flavor == 2:
         integrand = x**a*sympy.log(x) 
