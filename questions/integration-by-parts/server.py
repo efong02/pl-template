@@ -7,6 +7,7 @@ def generate(data):
     #select a transcendental function.
     flavor = random.randrange(1,5)
     x = sympy.symbols('x')
+    C = sympy.symbols('C')
 
     #exponential
     if flavor == 1: 
@@ -23,5 +24,6 @@ def generate(data):
 
     data["params"]["integrand"] = sympy.latex(integrand)
     data["params"]["x"] = sympy.latex(x)
+    data["params"]["C"] = sympy.latex(C)
 
-    data["correct_answers"]["ans"] = str(sympy.integrate(integrand, x))
+    data["correct_answers"]["ans"] = str(sympy.integrate(integrand, x) + C)
