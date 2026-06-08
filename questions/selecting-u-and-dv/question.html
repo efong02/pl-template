@@ -1,0 +1,29 @@
+<pl-question-panel>
+    <p>
+        Integration by parts is an integration technique to try when the integrand is a product of two functions and can't be integrated by simpler methods, like $u$-substitution. The formula for integration by parts is written below:
+        $$\int u dv = uv - \int v du$$
+    </p>
+    <p>
+        We choose part of the integrand to be $u$ and the rest to be $dv$. If we choose well, the integral becomes solvable. But be careful! For some choices of $u$ and $dv$, integration by parts can make things worse!
+    </p>
+    <p>
+        Consider the following integral: $$\int {{params.integrand}}dx$$ 
+        Select a $u$ and $dv$ and enter them below; $u$ should become simpler when you differentiate it, and $dv$ should be something you can integrate.
+    </p>
+        <strong>Note: $dv$ typically includes $dx$. The symbolic input below doesn't like $dx$; omit $dx$ for your answer, but hold it in your brain!</strong>
+    </p>
+</pl-question-panel>
+
+<pl-symbolic-input
+    answers-name="u"
+    label="Select $u$: "
+    variables="{{params.x}}"
+    display="block"
+></pl-symbolic-input>
+
+<pl-symbolic-input
+    answers-name="dv"
+    label="Select $dv$: "
+    variables="{{params.x}}"
+    display="block"
+></pl-symbolic-input>
