@@ -8,9 +8,7 @@
     </p>
     <p>
         Consider the following integral: $$\int {{params.integrand}}dx$$ 
-        Select a $u$ and $dv$ and enter them below; $u$ should become simpler when you differentiate it, and $dv$ should be something you can integrate.
-    </p>
-        <strong>Note: $dv$ typically includes $dx$. The symbolic input below doesn't like $dx$; omit $dx$ for your answer, but hold it in your brain!</strong>
+        Select a $u$ and $dv$ and enter them below; $u$ should become simpler when you differentiate it, and $dv$ should include $dx$.
     </p>
 </pl-question-panel>
 
@@ -24,6 +22,6 @@
 <pl-symbolic-input
     answers-name="dv"
     label="Select $dv$: "
-    variables="{{params.x}}"
+    variables="{{params.x}}, {{params.dx}}"
     display="block"
 ></pl-symbolic-input>

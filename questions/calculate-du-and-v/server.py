@@ -15,12 +15,12 @@ def generate(data):
         u = x
         dv = sympy.exp(a*x)
 
+
     #logarithmic
     if flavor == 2:
         integrand = x**a*sympy.log(x) 
         u = sympy.log(x)
-        dv = x**a 
-
+        dv = x**a
 
     #sine
     if flavor == 3:
@@ -28,15 +28,16 @@ def generate(data):
         u = x
         dv = sympy.sin(a*x)
 
-    #cosine
+    #cosin
     if flavor == 4:
         integrand = x*sympy.cos(a*x)
         u = x
         dv = sympy.cos(a*x)
 
+    data["params"]["u"] = sympy.latex(u)
+    data["params"]["dv"] = sympy.latex(dv)
     data["params"]["integrand"] = sympy.latex(integrand)
     data["params"]["x"] = sympy.latex(x)
     data["params"]["dx"] = sympy.latex(dx)
-
-    data["correct_answers"]["u"] = str(u)
-    data["correct_answers"]["dv"] = str(dv)
+    data["correct_answers"]["v"] = str(sympy.integrate(dv,x))
+    data["correct_answers"]["du"] = str(sympy.diff(u,x) * dx)
