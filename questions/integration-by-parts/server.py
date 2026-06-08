@@ -22,4 +22,4 @@ def generate(data):
     data["params"]["integrand"] = sympy.latex(integrand)
     data["params"]["x"] = sympy.latex(x)
 
-    data["correct_answers"]["ans"] = sympy.latex(sympy.integrate(integrand, x))
+    data["correct_answers"]["ans"] = str(sympy.integrate(integrand, x))
