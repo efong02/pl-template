@@ -1,8 +1,15 @@
 <pl-question-panel>
     <p>
+        The end behavior of a function $f(x)$ is how the function behaves as $x$ gets very large or very negative. We describe that symbolically as $\lim_{x \to \infty} f(x)$ and $\lim_{x \to -\infty} f(x)$, respectively.
+    </p>
+    <p>    
+        If either $\lim_{x \to \infty}$ or $\lim_{x \to -\infty} f(x)$ is finite, then we say that $f(x)$ has a horizontal asymptote at $y = \lim_{x \to \infty} f(x)$ or $y = \lim_{x \to -\infty} f(x)$, respectively.
+        Sometimes these limits are different, but for the problem below, they are the same.                   
+    </p>
+    <p>
         Let $$f(x) = {{params.rationalPolynomial}}$$
-        Find all horizontal asymptotes of $f(x)$.
+        Find the horizontal asymptote of $f(x)$.
     </p>
 </pl-question-panel>
 
-<pl-number-input answers-name = "ans" label="Horizontal Asymptote at $f(x) = $"></pl-number-input>
+<pl-number-input answers-name = "ans" label="$y = $"></pl-number-input>
