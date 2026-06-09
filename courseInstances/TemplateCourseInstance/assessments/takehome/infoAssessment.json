@@ -3,7 +3,7 @@
   "type": "Homework",
   "title": "Takehome",
   "set": "Homework",
-  "number": "2",
+  "number": "1",
   "allowAccess": [],
   "zones": [
     {
@@ -12,7 +12,7 @@
         { "id": "complete-the-square", "autoPoints": 1 },
         { "id": "horizontal-asymptote", "autoPoints": 1 , "manualPoints": 1},
         { "id": "integration-by-parts", "autoPoints": 1 },
-        { "id": "selecting-u-and-dv", "autoPoints": 1 , "manualPoints": 1 }
+        { "id": "selecting-u-and-dv", "autoPoints": 1 , "manualPoints": 5 }
       ]
     }
   ]
