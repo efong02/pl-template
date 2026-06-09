@@ -44,4 +44,4 @@ def generate(data):
     data["params"]["dx"] = sympy.latex(dx)
 
     data["correct_answers"]["u"] = str(u)
-    data["correct_answers"]["dv"] = str(dv)
+    data["correct_answers"]["dv"] = str(dv * dx)
