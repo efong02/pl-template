@@ -1,5 +1,6 @@
 import random
 import sympy
+import math
 
 def generate(data):
     a = random.randrange(2,5)
@@ -32,3 +33,9 @@ def generate(data):
     data["params"]["C"] = sympy.latex(C)
 
     data["correct_answers"]["ans"] = str(sympy.integrate(integrand, x) + C)
+
+# trying out PL's feedback system.
+def grade(data):
+    ans_correct = math.isclose(data["partial_scores"]["ans"]["score"],1.0)
+    if not ans_correct:
+        data["feedback"]["ans"] = "Keep trying, and don't forget to ask for help if you need it."
