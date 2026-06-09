@@ -2,13 +2,20 @@ import random
 import sympy
 
 def generate(data):
+    # a is a small coefficient
     a = random.randrange(2,5)
+    
+    # sometimes a is a small fraction
+    if bool(random.getrandbits(1)):
+        a = sympy.Rational(1,a)
+
+
 
     #select a transcendental function.
     flavor = random.randrange(1,5)
     x = sympy.symbols('x')
     dx = sympy.symbols('dx')
-
+    C = sympy.symbols('C')
     #exponential
     if flavor == 1: 
         integrand = x*sympy.exp(a*x)
@@ -39,5 +46,6 @@ def generate(data):
     data["params"]["integrand"] = sympy.latex(integrand)
     data["params"]["x"] = sympy.latex(x)
     data["params"]["dx"] = sympy.latex(dx)
-    data["correct_answers"]["v"] = str(sympy.integrate(dv,x))
+    data["params"]["C"] = sympy.latex(C)
+    data["correct_answers"]["v"] = str(sympy.integrate(dv,x) + C)
     data["correct_answers"]["du"] = str(sympy.diff(u,x) * dx)

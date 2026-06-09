@@ -4,6 +4,11 @@ import sympy
 def generate(data):
     a = random.randrange(2,5)
 
+    # sometimes a is a small fraction
+    if bool(random.getrandbits(1)):
+        a = sympy.Rational(1,a)
+
+
     #select a transcendental function.
     flavor = random.randrange(1,5)
     x = sympy.symbols('x')
