@@ -1,10 +1,10 @@
 <pl-question-panel>
     <p>
-        Integration by parts is an integration technique that can help us integrate when the integrand is a product of two functions and can't be integrated by simpler methods, like $u$-substitution. The formula for integration by parts is written below:
+        When the integrand of an integral is the product of two functions and is not solvable by u-substitution, we might consider using integration by parts. The formula is as follows:
         $$\int u dv = uv - \int v du$$
     </p>
     <p>
-        We choose part of the integrand to be $u$ and the rest to be $dv$. If we choose well, the integral becomes solvable. But be careful! For some choices of $u$ and $dv$, integration by parts can make things worse!
+        We select part of the integrand to $u$, and the rest— including $dx$— to be $dv$. Whatever we choose for $u$ should get simpler after differentiation, and whatever we choose for $dv$ should be something we can integrate. If we choose well, integration by parts can make an otherwise impossible integral solvable. But be careful! if we choose poorly, integration by parts can make the problem more complicated.
     </p>
     <p>
         Consider the following integral: $$\int {{params.integrand}}dx$$ 
