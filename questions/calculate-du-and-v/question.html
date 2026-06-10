@@ -1,14 +1,7 @@
 <pl-question-panel>
     <p>
-        When the integrand of an integral is the product of two functions and is not solvable by u-substitution, we might consider using integration by parts. The formula is as follows:
-        $$\int u dv = uv - \int v du$$
-    </p>
-    <p>
-        We select part of the integrand to $u$, and the rest— including $dx$— to be $dv$. Whatever we choose for $u$ should get simpler after differentiation, and whatever we choose for $dv$ should be something we can integrate. If we choose well, integration by parts can make an otherwise impossible integral solvable. But be careful! if we choose poorly, integration by parts can make the problem more complicated.
-    </p>
-    <p>
         Consider the following integral: $$\int {{params.integrand}}dx$$ 
-        Suppose that $$u = {{params.u}}$$ and $$dv = {{params.dv}}dx$$ Compute $du$ by differentiating $u$, and compute $v$ by integrating ${{params.dv}}dx$. Don't forget the constant of integration!
+        Let $$u = {{params.u}}$$ and $$dv = {{params.dv}}dx$$ Compute $du$ by differentiating $u$, and compute $v$ by integrating ${{params.dv}}dx$. Don't forget the constant of integration!
     </p>
 </pl-question-panel>
 
