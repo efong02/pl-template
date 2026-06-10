@@ -17,9 +17,11 @@ def generate(data):
     
     
     x = sympy.symbols("x")
+    f = (a * x**k + b * x + c)/((d - e * x)*(f - h * g * x)*(1-x)**j)
 
-    data["params"]["rationalPolynomial"] = sympy.latex((a * x**k + b * x + c)/((d - e * x)*(f - h * g * x)*(1-x)**j))   
-    data["correct_answers"]["numDegree"] = k
-    data["correct_answers"]["denomDegree"] = 2 + j
+    data["params"]["rationalPolynomial"] = sympy.latex(f) 
+
+    data["correct_answers"]["positiveLimit"] = str(sympy.limit(f, x, sympy.oo))
+    data["correct_answers"]["negativeLimit"] = str(sympy.limit(f, x, -sympy.oo))
 
 

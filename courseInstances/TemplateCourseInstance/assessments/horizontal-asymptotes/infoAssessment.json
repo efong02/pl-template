@@ -10,6 +10,7 @@
       "questions": [
         { "id": "identify-leading-coefficients", "autoPoints": 1 },
         { "id": "identify-degree-of-polynomial", "autoPoints": 1 },
+        { "id": "identify-end-behavior", "autoPoints": 2 },
         { "id": "horizontal-asymptote", "autoPoints": 1, "manualPoints": 1 }
       ]
     }
