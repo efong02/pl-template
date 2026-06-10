@@ -14,7 +14,7 @@ def generate(data):
     h = random.choice([1, -1])
     
     # since degree for both is fixed at 2, only the leading coefficients matter for horizontal asymptote
-    # this question ignores cases where the numerator's degree != denominator's degree.
+    # this question focuses the case where the numerator's degree == denominator's degree.
     # I wanted each student to calculate the horizontal asymptote from the ratio of the leading coefficients.
     horizontalAsymptote = a/(e*g*h)
     

@@ -26,7 +26,9 @@ def generate(data):
 
     # if either limit is finite, then the limits are both finite and equal each other. 
     # this occurs when the degree of the numerator <= degree of denominator.
+        # 3/8 chance lims = 0, 2/8 chance lims = ratio of coefficents.
     # if the degree of numerator >= denominator, both limits diverge; direction of divergence determined by sign and degree.
+        # 3/8 chance lims diverge.
     
 
     data["correct_answers"]["positiveLimit"] = str(sympy.limit(f, x, sympy.oo))
