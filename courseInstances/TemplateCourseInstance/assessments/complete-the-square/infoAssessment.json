@@ -1,0 +1,9 @@
+{
+  "uuid": "d5310a29-bde3-4286-86dd-86a65b7801f0",
+  "type": "Homework",
+  "title": "Complete The Square",
+  "set": "Homework",
+  "number": "2",
+  "allowAccess": [],
+  "zones": [{ "questions": [{ "id": "complete-the-square", "autoPoints": 1 }] }]
+}

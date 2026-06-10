@@ -2,7 +2,7 @@ import random
 
 def generate(data):
     # displayed form is x^2 + 2ax = b^2-a^2
-    # this is so that the numbers are nice
+    # this is so that the numbers are nice, whole numbers.
     a = random.randrange(1,13)
     b = random.randrange(1,13)
 

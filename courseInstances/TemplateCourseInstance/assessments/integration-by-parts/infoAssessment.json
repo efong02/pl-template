@@ -1,0 +1,17 @@
+{
+  "uuid": "a911510d-5291-42a4-a957-cf2af500a48c",
+  "type": "Homework",
+  "title": "Integration By Parts",
+  "set": "Homework",
+  "number": "3",
+  "allowAccess": [],
+  "zones": [
+    {
+      "questions": [
+        { "id": "selecting-u-and-dv", "autoPoints": 1 },
+        { "id": "calculate-du-and-v", "autoPoints": 1 },
+        { "id": "integration-by-parts", "autoPoints": 1 }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "uuid": "fbf0bbc1-ad84-442c-b557-558e016cb08a",
+  "type": "Homework",
+  "title": "Horizontal Asymptotes",
+  "set": "Homework",
+  "number": "1",
+  "allowAccess": [],
+  "zones": [
+    { "questions": [{ "id": "identify-leading-coefficients", "autoPoints": 1 }] },
+    { "questions": [{ "id": "identify-degree-of-polynomial", "autoPoints": 1 }] },
+    { "questions": [{ "id": "horizontal-asymptote", "autoPoints": 1, "manualPoints": 1 }] }
+  ]
+}
