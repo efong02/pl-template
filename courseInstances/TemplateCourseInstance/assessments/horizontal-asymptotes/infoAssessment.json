@@ -6,8 +6,12 @@
   "number": "1",
   "allowAccess": [],
   "zones": [
-    { "questions": [{ "id": "identify-leading-coefficients", "autoPoints": 1 }] },
-    { "questions": [{ "id": "identify-degree-of-polynomial", "autoPoints": 1 }] },
-    { "questions": [{ "id": "horizontal-asymptote", "autoPoints": 1, "manualPoints": 1 }] }
+    {
+      "questions": [
+        { "id": "identify-leading-coefficients", "autoPoints": 1 },
+        { "id": "identify-degree-of-polynomial", "autoPoints": 1 },
+        { "id": "horizontal-asymptote", "autoPoints": 1, "manualPoints": 1 }
+      ]
+    }
   ]
 }
