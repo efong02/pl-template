@@ -5,5 +5,12 @@
   "set": "Homework",
   "number": "2",
   "allowAccess": [],
-  "zones": [{ "questions": [{ "id": "complete-the-square", "autoPoints": 1 }] }]
+  "zones": [
+    {
+      "questions": [
+        { "id": "determine-addend", "autoPoints": 1 },
+        { "id": "complete-the-square", "autoPoints": 1 }
+      ]
+    }
+  ]
 }
