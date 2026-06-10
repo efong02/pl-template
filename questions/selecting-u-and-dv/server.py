@@ -43,5 +43,8 @@ def generate(data):
     data["params"]["x"] = sympy.latex(x)
     data["params"]["dx"] = sympy.latex(dx)
 
+    # the integrands generate above are simple enough that they have one correct answer
+    # even so, I added a rich-text-editor so students may defend their selections of u and dv
+
     data["correct_answers"]["u"] = str(u)
     data["correct_answers"]["dv"] = str(dv * dx)

@@ -9,33 +9,34 @@ def generate(data):
     if bool(random.getrandbits(1)):
         a = sympy.Rational(1,a)
 
-
-
-    #select a transcendental function.
-    flavor = random.randrange(1,5)
+    # define sympy symbols
     x = sympy.symbols('x')
     dx = sympy.symbols('dx')
     C = sympy.symbols('C')
-    #exponential
+
+    # select a transcendental function.
+    flavor = random.randrange(1,5)
+    # exponential
     if flavor == 1: 
         integrand = x*sympy.exp(a*x)
         u = x
         dv = sympy.exp(a*x)
 
 
-    #logarithmic
+    # logarithmic
     if flavor == 2:
         integrand = x**a*sympy.log(x) 
+        # in this case, u = log(x); differentiates nicely, and its integral is a non-trivial computation.
         u = sympy.log(x)
         dv = x**a
 
-    #sine
+    # sine
     if flavor == 3:
         integrand = x*sympy.sin(a*x)
         u = x
         dv = sympy.sin(a*x)
 
-    #cosin
+    # cosine
     if flavor == 4:
         integrand = x*sympy.cos(a*x)
         u = x
