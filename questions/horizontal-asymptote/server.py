@@ -1,5 +1,6 @@
 import random
 import sympy
+import math
 
 def generate(data):
 
@@ -14,7 +15,7 @@ def generate(data):
     h = random.choice([1, -1])
     
     # since degree for both is fixed at 2, only the leading coefficients matter for horizontal asymptote
-    # this question focuses the case where the numerator's degree == denominator's degree.
+    # this question focuses on the case where the numerator's degree == denominator's degree.
     # I wanted each student to calculate the horizontal asymptote from the ratio of the leading coefficients.
     horizontalAsymptote = a/(e*g*h)
     
@@ -23,4 +24,9 @@ def generate(data):
     data["params"]["rationalPolynomial"] = sympy.latex((a * x**2 + b * x + c)/((d - e * x)*(f - h * g * x)))   
     data["correct_answers"]["ans"] = horizontalAsymptote
 
+
+def grade(data):
+    ans_correct = math.isclose(data["partial_scores"]["ans"]["score"], 1.0)
+    if not ans_correct and float(data["submitted_answers"]["ans"]) == -1.0 * data["correct_answers"]["ans"]:
+        data["feedback"]["ans"] = "You're off by a factor of -1."
 

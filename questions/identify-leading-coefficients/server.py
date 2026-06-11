@@ -4,7 +4,7 @@ import sympy
 def generate(data):
 
     # f(x) = (ax^2 + bx + c)/(d - ex)(f - ghx)
-    # generate coefficients and constats
+    # generate coefficients and constants
     a = random.randrange(2,10)
     b = random.randrange(2,5)
     c = random.randrange(1,6)

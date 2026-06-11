@@ -14,8 +14,10 @@ def generate(data):
     g = random.randrange(1,6)
     h = random.choice([1, -1])
 
-    # generate a few powers for variety.
+    # j determines if (1-x) term is in denominator; denominator is either degree 2 or 3
     j = random.choice([0,1])
+
+    # k determines degree of numerator
     k = random.choice([1,2,3,4])
     
     

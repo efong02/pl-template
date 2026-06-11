@@ -1,5 +1,6 @@
 import random
 import sympy
+import math
 
 def generate(data):
     a = random.randrange(2,5)
@@ -42,9 +43,22 @@ def generate(data):
     data["params"]["integrand"] = sympy.latex(integrand)
     data["params"]["x"] = sympy.latex(x)
     data["params"]["dx"] = sympy.latex(dx)
+    data["params"]["flavor"] = flavor
 
     # the integrands generate above are simple enough that they have one correct answer
     # even so, I added a rich-text-editor so students may defend their selections of u and dv
 
     data["correct_answers"]["u"] = str(u)
     data["correct_answers"]["dv"] = str(dv * dx)
+
+
+
+
+#clunky attempt at feedback!
+def grade(data):
+    dv_correct = math.isclose(data["partial_scores"]["dv"]["score"], 1.0)
+    # for x**a * ln(x), common mistake is to choose dv = ln(x)dx
+    if not dv_correct and int(data["params"]["flavor"]) == 2:
+       data["feedback"]["dv"] = "Your choice of $dv$ is hard to integrate!"
+
+
